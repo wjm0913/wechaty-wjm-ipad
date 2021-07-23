@@ -5,6 +5,8 @@
   "author": "haoda",
   "license": "Apache-2.0",
   "dependencies": {
+    "koa2-request": "^1.0.4",
+    "node-schedule": "^2.0.0",
     "qrcode-terminal": "^0.12.0",
     "wechaty": "^0.60.10",
     "wechaty-puppet-padlocal": "^0.4.1"
@@ -14,6 +16,7 @@
     "typescript": "^4.1.5"
   },
   "scripts": {
-    "demo": "./node_modules/.bin/ts-node main.ts"
+    "demo": "./node_modules/.bin/ts-node main.ts",
+    "app": "node app.js"
   }
 }
