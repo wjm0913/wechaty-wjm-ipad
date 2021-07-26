@@ -30,9 +30,9 @@ class TimedTask {
         });
         // 首先判断 这个群是否开启了 群定时任务的功能
         if (roomTimedTaskType){
-            if (content.includes('骂胖子')) {
+            if (content.includes('问候胖子')) {
                 schedule.scheduleJob('userid','59 * * * * *',()=>{
-                    roomSay.say( '1111')
+                    roomSay.say( '胖子早')
                 });
             }
             if (content.includes('停')) {

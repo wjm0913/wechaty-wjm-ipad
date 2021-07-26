@@ -45,9 +45,9 @@ class Weather {
                     roomSay.say(weatherText.textWeather3)
                     return
                 }
-                roomSay.say(`${nameText}，请问要查询哪里的天气的呢？\n格式：天气加省份加城市\n例如:@机器人明明天气加河北加迁安\n来自机器人明明...`,...someMembers)
+                roomSay.say(`${nameText}，请问要查询哪里的天气的呢？\n格式：天气加省份加城市\n例如:@机器人小明天气加河北加迁安\n来自机器人小明...`,...someMembers)
             } else {
-                // roomSay.say(`我现在只会查询天气！\n格式：天气加省份加城市\n例如:@机器人明明天气加河北加迁安\n...来自机器人明明...`)
+                // roomSay.say(`我现在只会查询天气！\n格式：天气加省份加城市\n例如:@机器人小明天气加河北加迁安\n...来自机器人小明...`)
 
             }
 

@@ -9,7 +9,7 @@ async function tianApi (newBoxText){
     if (newTianApiText.code == 200) {
         return newTianApiText.newslist[0].reply
     }
-    return '机器人明明检修中...'
+    return '机器人小明检修中...'
 }
 
 module.exports ={

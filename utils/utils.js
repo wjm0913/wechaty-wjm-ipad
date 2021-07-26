@@ -8,7 +8,7 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
  * @returns {boolean}
  */
 function excludeType(text) {
-    if (text.includes('天气') || text.includes('骂胖子') || text.includes('停')) {
+    if (text.includes('天气') || text.includes('问候胖子') || text.includes('停')) {
         return true
     } else {
         return false
