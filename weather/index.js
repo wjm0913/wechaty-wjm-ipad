@@ -40,9 +40,8 @@ class Weather {
                     let boxText = content.substr(7, content.length)
                     let newBoxText = boxText.split('加')
                     let weatherText = await weatherApi(newBoxText)
-                    roomSay.say(weatherText.textWeather1)
-                    roomSay.say(weatherText.textWeather2)
-                    roomSay.say(weatherText.textWeather3)
+                    let someMembers = await check( room, await contact.name())
+                    roomSay.say(weatherText,...someMembers)
                     return
                 }
                 roomSay.say(`${nameText}，请问要查询哪里的天气的呢？\n格式：天气加省份加城市\n例如:@机器人小明天气加河北加迁安\n来自机器人小明...`,...someMembers)
