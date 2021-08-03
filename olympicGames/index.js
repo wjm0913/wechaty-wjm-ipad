@@ -17,6 +17,7 @@ class OlympicGames {
         if (await this.msg.mentionSelf()) {
             let strData = await getOlyMedalsData()
             let str = `地区 · 金 · 银 · 铜 · 总`
+            await delay()
             roomSay.say(`\n${str}\n${strData}`, ...someMembers)
         }
     }
