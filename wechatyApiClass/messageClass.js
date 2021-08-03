@@ -2,6 +2,7 @@ const ON_MESSAGE = Symbol('onMessage')
 const {Weather} = require('../weather/index')
 const {TianApi} = require('../tianapi/index')
 const { TimedTask } = require('../timedTask/index')
+const {OlympicGames} = require("../olympicGames");
 
 class MessageClass {
     constructor(bot) {
@@ -24,6 +25,7 @@ class MessageClass {
         let WeatherExample = new Weather(this.bot, msg)
         let TianApiExample = new TianApi(this.bot, msg)
         let TimedTaskExample = new TimedTask(this.bot)
+        let OlympicGamesExample = new OlympicGames(this.bot,msg)
         // 群消息
         if (room && isText) {
             // 天气
@@ -32,6 +34,8 @@ class MessageClass {
             await TianApiExample.GroupMessage(contact, room, content, alias, msg)
             // 群成员 设定定时任务
             await TimedTaskExample.messageTimedTaskRoom(contact, room, content, alias, msg)
+            // 奥运奖牌
+            await OlympicGamesExample.GroupMessage(contact, room, content, alias, msg)
             const topic = await room.topic()
             console.log(`群名: ${topic} 发消息人: ${await contact.name()} 内容: ${content}`);
         } else if (isText) {

@@ -23,7 +23,6 @@ class TimedTask {
      * @param msg
      */
     async messageTimedTaskRoom(contact, room, content, alias, msg){
-        console.log(msg,'------定时');
         let roomTimedTaskType = true // 以后可以在 数据库中获取
         let roomSay = await this.bot.Room.find({
             topic:  await room.topic()                                // 设置要 操作群的的 topic

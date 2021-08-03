@@ -8,11 +8,11 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
  * @returns {boolean}
  */
 function excludeType(text) {
-    if (text.includes('天气') || text.includes('问候胖子') || text.includes('停')) {
-        return true
-    } else {
-        return false
-    }
+    return !!(text.includes('天气') || text.includes('问候胖子') || text.includes('停') || text.includes('奥运') || text.includes('奖牌') || text.includes('金牌'));
+}
+
+function excludeTypeOlympicGames(text) {
+    return !(text.includes('奥运') || text.includes('奖牌') || text.includes('金牌'));
 }
 
 /**
@@ -39,7 +39,8 @@ async function check(room,nameText,type = false) {
 module.exports = {
     delay,
     excludeType,
-    check
+    check,
+    excludeTypeOlympicGames
 }
 
 
